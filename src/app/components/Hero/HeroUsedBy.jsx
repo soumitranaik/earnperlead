@@ -1,24 +1,23 @@
-import React from 'react'
+import React from "react";
 
 const HeroUsedBy = () => {
   return (
-    <div className='hero-usedby'>
+    <div className="hero-usedby">
       <div className="hero-usedbycopy">
-        <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co
-
+        <p className="font-[300]">  
+          Turn your business connections into high-value commissions. Our
+          development agency creates websites, mobile apps, and software
+          solutions that drive real results for clients. Refer qualified leads
+          and earn 10-15% commission on contracts averaging $35K. With our
+          proven track record and your network, it's a winning combination.
         </p>
       </div>
-      <div className="hero-usedby-logos">
-        <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-        </p>
+      <div className="hero-usedby-logos w-[400px] text-right">
+        <p>Spot the opportunity. Make the intro. Cash the check.
+It's really that simple.</p>
       </div>
-      
     </div>
-  )
-}
+  );
+};
 
-export default HeroUsedBy
+export default HeroUsedBy;

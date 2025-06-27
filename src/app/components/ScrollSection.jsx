@@ -14,40 +14,33 @@ const ScrollSection = () => {
 
   const content = [
     {
-      title: "Wedding Celebrations",
+      title: "Know Someone? Get Paid",
       description:
-        "Transform your special day into an unforgettable celebration with our comprehensive wedding services. From intimate ceremonies to grand receptions, we handle every detail with precision and care.",
+        "People around you need websites and apps built. You know us, we build amazing stuff. Connect us = you get rich. It's that easy.",
       image:
         "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&h=600&fit=crop",
     },
     {
-      title: "Corporate Events",
+      title: "Your Phone = Your ATM",
       description:
-        "Elevate your business gatherings with our professional corporate event management services. We create impactful experiences that align with your brand and objectives.",
+        "Everyone in your contact list knows someone who needs a website, app, or software. Make the intro, we do the work, you collect the cash.",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
     },
     {
-      title: "Gourmet Catering",
+      title: "Find Leads, Earn Big",
       description:
-        "Delight your guests with our exquisite culinary offerings. Our master chefs create memorable dining experiences using the finest ingredients and innovative techniques.",
+        "Businesses everywhere need better websites and apps. Find them, send them to us, and collect massive commissions when they sign up.",
       image:
         "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&h=600&fit=crop",
     },
     {
-      title: "Birthday Parties",
+      title: "Hunt For Leads, Cash In",
       description:
-        "Make every birthday celebration magical with our creative party planning services. We design unique experiences tailored to the birthday person's personality and preferences.",
+        "Businesses with terrible websites are money waiting to happen. Find them, send them our way, and earn huge commissions for your detective work.",
       image:
         "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop",
-    },
-    {
-      title: "Festival Events",
-      description:
-        "Celebrate cultural festivals and special occasions with our authentic event management services. We honor traditions while adding modern flair to create meaningful experiences.",
-      image:
-        "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&h=600&fit=crop",
-    },
+    }
   ];
 
   useEffect(() => {
@@ -69,7 +62,7 @@ const ScrollSection = () => {
               start: "top center",
               end: "center center",
               scrub: true,
-            }
+            },
           });
 
           gsap.to(images[index], {
@@ -79,9 +72,10 @@ const ScrollSection = () => {
               start: "top center",
               end: "center center",
               scrub: true,
-            }
+            },
           });
-          gsap.fromTo(images[index], 
+          gsap.fromTo(
+            images[index],
             { opacity: 0, scale: 1.1 },
             {
               opacity: 1,
@@ -92,7 +86,7 @@ const ScrollSection = () => {
                 start: "top center",
                 end: "center center",
                 scrub: 1,
-              }
+              },
             }
           );
         }
@@ -102,7 +96,8 @@ const ScrollSection = () => {
       ScrollTrigger.create({
         trigger: rightColumnRef.current,
         start: "top top",
-        end: () => `+=${leftColumnRef.current.scrollHeight - window.innerHeight}`,
+        end: () =>
+          `+=${leftColumnRef.current.scrollHeight - window.innerHeight}`,
         pin: true,
         anticipatePin: 1,
         // markers: true // uncomment for debugging
@@ -122,10 +117,10 @@ const ScrollSection = () => {
               {content.map((item, index) => (
                 <div key={index} className="h-screen flex items-center mb-20">
                   <div className="space-y-6">
-                    <h2 className="text-4xl font-bold text-gray-900 leading-tight">
+                    <h2 className="text-6xl italic font-[700] uppercase text-gray-900  leading-tight">
                       {item.title}
                     </h2>
-                    <p className="text-xl text-gray-700 leading-relaxed">
+                    <p className="text-xl text-gray-700 font-[200] leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -134,7 +129,10 @@ const ScrollSection = () => {
             </div>
 
             {/* Right Column - Sticky Images */}
-            <div ref={rightColumnRef} className="relative h-screen sticky top-0">
+            <div
+              ref={rightColumnRef}
+              className="relative h-screen sticky top-0"
+            >
               <div className="relative w-full h-full">
                 {content.map((item, index) => (
                   <div
